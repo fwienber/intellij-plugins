@@ -724,6 +724,11 @@ public class FlexHighlightingTest extends JSDaemonAnalyzerTestCase {
     doTestFor(true, getTestName(false) + ".mxml", getTestName(false) + "_2.as");
   }
 
+  @JSTestOptions({JSTestOption.WithFlexSdk})
+  public void testNativeConstructorAllowedInMxml() throws Exception {
+    doTestFor(true, getTestName(false) + ".mxml", getTestName(false) + "_2.as");
+  }
+
   @JSTestOptions(
     {JSTestOption.WithJsSupportLoader, JSTestOption.WithFlexFacet/*, WithoutSourceRoot*/})
   public void testEmbedWithAbsLocation() throws Exception {
